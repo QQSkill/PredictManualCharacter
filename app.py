@@ -1,13 +1,8 @@
-from doctest import FAIL_FAST
-from pickle import TRUE
 import pygame
 from pygame.locals import *
 from pygame import image
 from pygame.locals import * 
-from numpy import testing
-import sys
 import numpy as np
-from numpy.lib.type_check import imag
 from tensorflow.keras.models import load_model
 import cv2
 
@@ -42,7 +37,6 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
-            sys.exit()
         if event.type == pygame.MOUSEMOTION and is_writing == True:
             x, y = event.pos
             pygame.draw.circle(DISPLAYSURF, WHITE, (x, y), 4, 0)
